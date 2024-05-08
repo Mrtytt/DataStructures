@@ -1,0 +1,7 @@
+C:\Users\Murat Berk\Desktop\Projeler\VeriYapilari\VeriYapilari\Lab6\bin\Debug\Lab6.exe.config
+C:\Users\Murat Berk\Desktop\Projeler\VeriYapilari\VeriYapilari\Lab6\bin\Debug\Lab6.exe
+C:\Users\Murat Berk\Desktop\Projeler\VeriYapilari\VeriYapilari\Lab6\bin\Debug\Lab6.pdb
+C:\Users\Murat Berk\Desktop\Projeler\VeriYapilari\VeriYapilari\Lab6\obj\Debug\Lab6.csproj.AssemblyReference.cache
+C:\Users\Murat Berk\Desktop\Projeler\VeriYapilari\VeriYapilari\Lab6\obj\Debug\Lab6.csproj.CoreCompileInputs.cache
+C:\Users\Murat Berk\Desktop\Projeler\VeriYapilari\VeriYapilari\Lab6\obj\Debug\Lab6.exe
+C:\Users\Murat Berk\Desktop\Projeler\VeriYapilari\VeriYapilari\Lab6\obj\Debug\Lab6.pdb

@@ -1,0 +1,7 @@
+C:\Users\Murat Berk\Desktop\Projeler\VeriYapilari\VeriYapilari\hafta5\bin\Debug\hafta5.exe.config
+C:\Users\Murat Berk\Desktop\Projeler\VeriYapilari\VeriYapilari\hafta5\bin\Debug\hafta5.exe
+C:\Users\Murat Berk\Desktop\Projeler\VeriYapilari\VeriYapilari\hafta5\bin\Debug\hafta5.pdb
+C:\Users\Murat Berk\Desktop\Projeler\VeriYapilari\VeriYapilari\hafta5\obj\Debug\hafta5.csproj.AssemblyReference.cache
+C:\Users\Murat Berk\Desktop\Projeler\VeriYapilari\VeriYapilari\hafta5\obj\Debug\hafta5.csproj.CoreCompileInputs.cache
+C:\Users\Murat Berk\Desktop\Projeler\VeriYapilari\VeriYapilari\hafta5\obj\Debug\hafta5.exe
+C:\Users\Murat Berk\Desktop\Projeler\VeriYapilari\VeriYapilari\hafta5\obj\Debug\hafta5.pdb

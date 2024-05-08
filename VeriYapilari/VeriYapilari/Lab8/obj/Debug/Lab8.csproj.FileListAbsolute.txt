@@ -1,0 +1,7 @@
+C:\Users\Murat Berk\Desktop\Projeler\VeriYapilari\VeriYapilari\Lab8\bin\Debug\Lab8.exe.config
+C:\Users\Murat Berk\Desktop\Projeler\VeriYapilari\VeriYapilari\Lab8\bin\Debug\Lab8.exe
+C:\Users\Murat Berk\Desktop\Projeler\VeriYapilari\VeriYapilari\Lab8\bin\Debug\Lab8.pdb
+C:\Users\Murat Berk\Desktop\Projeler\VeriYapilari\VeriYapilari\Lab8\obj\Debug\Lab8.csproj.AssemblyReference.cache
+C:\Users\Murat Berk\Desktop\Projeler\VeriYapilari\VeriYapilari\Lab8\obj\Debug\Lab8.csproj.CoreCompileInputs.cache
+C:\Users\Murat Berk\Desktop\Projeler\VeriYapilari\VeriYapilari\Lab8\obj\Debug\Lab8.exe
+C:\Users\Murat Berk\Desktop\Projeler\VeriYapilari\VeriYapilari\Lab8\obj\Debug\Lab8.pdb

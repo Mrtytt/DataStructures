@@ -1,0 +1,5 @@
+﻿  Denemeler.c
+1_lb.obj : error LNK2005: main already defined in 1.obj
+Denemeler.obj : error LNK2005: main already defined in 1.obj
+Denemeler.obj : error LNK2019: unresolved external symbol yeni_dugum referenced in function main
+C:\Users\Murat Berk\Desktop\Projeler\VeriYapilari\VeriYapilari\x64\Debug\VeriYapilari.exe : fatal error LNK1120: 1 unresolved externals
