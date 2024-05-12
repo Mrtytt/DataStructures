@@ -1,138 +1,52 @@
 ﻿using System;
-using System.Collections.Concurrent;
 using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 
-namespace Lab7
+namespace Lab10
 {
     public class Program
     {
-        public class Eleman
+        public static void Main(string[] args)
         {
-            public String atis;
-            public int toplam;
-            public Eleman ileri;
-            public Eleman(String atis, int toplam)
-            {
-                this.atis = atis;
-                this.toplam = toplam;
-                ileri = null;
-            }
-        }
-        public class Kuyruk
-        {
-            public Eleman bas;
-            public Eleman son;
+            int[] atisDegerleri = new int[] { 11, 21, 27, 33, 36 };
 
-            public Kuyruk()
+            HashSet<int> gezilenDurumlar = new HashSet<int>();
+
+            Queue<Tuple<int, List<int>>> kuyruk = new Queue<Tuple<int, List<int>>>();
+            kuyruk.Enqueue(new Tuple<int, List<int>>(0, new List<int>()));
+
+            while (kuyruk.Count > 0)
             {
-                bas = null;
-                son = null;
-            }
-            public bool kuyrukBos()
-            {
-                if (bas == null)
-                    return true;
-                else
-                    return false;
-            }
-            public void kuyrugaEkle(Eleman eleman)
-            {
-                if (!kuyrukBos())
-                    son.ileri = eleman;
-                else
-                    bas = eleman;
-                son = eleman;
-            }
-            public Eleman kuyrukSil()
-            {
-                Eleman sonuc;
-                sonuc = bas;
-                if (!kuyrukBos())
+                var current = kuyruk.Dequeue();
+                int currentScore = current.Item1;
+                List<int> atislar = current.Item2;
+
+                foreach (var atis in atisDegerleri)
                 {
-                    bas = bas.ileri;
-                    if (bas == null)
-                        son = null;
-                }
-                return sonuc;
-            }
-            public String hedefTahtasi(int[] tahta)
-            {
-                int i, j;
+                    int yeniSkor = currentScore + atis;
+                    List<int> yeniAtislar = new List<int>(atislar);
+                    yeniAtislar.Add(atis);
 
-                String newAtis;
-                Eleman newEleman;
-                Kuyruk newKuyruk;
-
-                newEleman = new Eleman("", 0);
-                newKuyruk = new Kuyruk();
-
-                newKuyruk.kuyrugaEkle(newEleman);
-
-                while (!newKuyruk.kuyrukBos())
-                {
-                    if (newEleman.toplam == 99)
+                    if (yeniSkor >= 100)
                     {
-                        Console.WriteLine("Kazandınız..");
-                        return newEleman.atis;
+                        Console.WriteLine($"Atışlar: {string.Join(", ", yeniAtislar)} - Toplam Skor: {yeniSkor} - Oyunu kaybettiniz!");
+                        continue;
                     }
 
-                    if (newEleman.toplam >= 100)
+                    if (yeniSkor == 99)
                     {
-                        Console.WriteLine("Kaybettiniz..");
-                        return newEleman.atis;
-                    }
-                    newEleman = newKuyruk.kuyrukSil();
-                    for (i = 0; i < tahta.Length; i++)
-                    {
-                        j = newEleman.toplam + tahta[i];
-                        if (i == 0)
-                            newAtis = newEleman.atis + tahta[i];
-                        else
-                            newAtis = newEleman.atis + "_" + tahta[i];
-                        newEleman = new Eleman(newAtis, j);
-                        newKuyruk.kuyrugaEkle(newEleman);
-                    }
-                }
-                return null;
-            }
-            public int[] tahtaAtisi()
-            {
-                int[] degerler = new int[5] { 11, 21, 27, 33, 36 };
-                List<int> sonuclar = new List<int>();
-                int toplam = 0;
-
-                while (toplam <= 100)
-                {
-                    if (toplam == 99)
+                        Console.WriteLine($"Atışlar: {string.Join(", ", yeniAtislar)} - Toplam Skor: {yeniSkor} - Oyunu kazandınız!");
                         break;
-                    Random random = new Random();
-                    int sonuc = random.Next(0, 5);
+                    }
 
-                    Thread.Sleep(100);
-
-                    sonuclar.Add(degerler[sonuc]);
-                    toplam += degerler[sonuc];
+                    if (!gezilenDurumlar.Contains(yeniSkor))
+                    {
+                        gezilenDurumlar.Add(yeniSkor);
+                        kuyruk.Enqueue(new Tuple<int, List<int>>(yeniSkor, yeniAtislar));
+                    }
                 }
-
-                return sonuclar.ToArray();
-
             }
-        }
-        static void Main(string[] args)
-        {
-            Kuyruk kuyruk = new Kuyruk();
-
-            int[] atislarDizisi = kuyruk.tahtaAtisi();
-            String atislar = kuyruk.hedefTahtasi(atislarDizisi);
-
-            Console.WriteLine("Sonuclar : {0}", atislar);
             Console.ReadLine();
-
         }
     }
 }
